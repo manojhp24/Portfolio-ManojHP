@@ -1,0 +1,108 @@
+.home-sec {
+  min-height: 100vh;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10rem 0 0 0;
+}
+
+.right-sec {
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #1c2b78 32%,
+    #161923 100%
+  );
+  border-radius: 50%;
+}
+
+.right-img img {
+  width: 25vw;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 5rem #7ea0fd;
+}
+
+.my-name {
+  font-size: 4rem;
+}
+
+.my-name span {
+  font-size: 4rem;
+  color: #7ea0fd;
+}
+
+#element {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #a5bdff;
+}
+
+.btn {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.btn button {
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+
+.btn-resume {
+  width: 10rem;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  border: 2px solid white;
+  cursor: pointer;
+  font-weight: 400;
+  transition: background-color 0.3s ease-in-out;
+}
+.btn-contact {
+  width: 10rem;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn button:hover {
+  background-color: #a5bdff;
+  color: black;
+  border: 2px solid #a5bdff;
+  box-shadow: 0 0 20px #a5bdff;
+}
+
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icon-linkd {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #d0dcfd;
+  transition: color 0.3s ease-in-out;
+}
+
+.icon-git {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #d0dcfd;
+  transition: color 0.3s ease-in-out;
+}
+
+.icon-linkd:hover {
+  color: #a5bdff;
+  
+}
+.icon-git:hover {
+  color: #a5bdff;
+}

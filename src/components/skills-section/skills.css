@@ -1,0 +1,64 @@
+.skill-sec {
+  padding: 2rem 0;
+  min-height: 100vh;
+  padding-top: 6.5rem;
+}
+.skill-sec h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.skill-cont {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.prg-lang hr {
+  margin-top: 1rem;
+}
+
+.pl-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1.1rem;
+  margin-top: 1rem;
+}
+
+.pl-grid div {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.pl-grid div {
+  transition: transform 0.5s ease-in-out;
+}
+
+.pl-grid div:hover {
+  transform: scale(1.15);
+}
+
+.pl-grid div img {
+  width: 1.5rem;
+}
+
+.pl-py {
+  font-size: 2rem;
+  color: #6e90ed;
+}
+
+.pl-item img{
+  transition: transform 0.1s ease-in;
+}
+
+.pl-item img:hover{
+  transform: rotate(-50deg);
+}
+
+.heading{
+  font-size: 1.2rem;
+  font-weight: 600;
+}

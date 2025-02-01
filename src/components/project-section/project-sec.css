@@ -1,0 +1,175 @@
+.project-sec {
+  padding-top: 6.5rem;
+  min-height: 100vh;
+}
+
+.proj-card-cont {
+  display: flex;
+}
+
+.p-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1b2335;
+  padding: 20px;
+  border-radius: 1rem;
+  max-width: 400px;
+  min-height: 450px;
+  width: 100%;
+  position: relative;
+}
+.p-card img {
+  align-self: center;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card-titlle {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.description {
+  margin-bottom: 1rem;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  margin-bottom: 0.9rem;
+}
+.card-tags span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+.project-sec h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-sec {
+  padding-top: 6rem;
+  min-height: 100vh;
+  margin-bottom: 2rem;
+}
+
+.proj-card-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 2rem;
+}
+
+.p-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1b2335;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 350px;
+  flex-grow: 1;
+  /* animation: neonPluse 2s infinite; */
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 0 20px #303030;
+}
+
+.p-card img {
+  transition: transform 0.3s ease-in-out;
+}
+.p-card img:hover {
+  transform: scale(1.02);
+}
+
+@keyframes neonPluse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(66, 220, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(66, 220, 255, 0.3);
+  }
+}
+
+.p-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(66, 220, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.p-card:hover::before {
+  left: 100%;
+}
+
+.p-card img {
+  align-self: center;
+  width: 100%;
+  height: auto; /* More flexible */
+  max-height: 200px; /* Keeps size reasonable */
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem; /* Slightly smaller */
+}
+
+.description {
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-tags span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.card-links {
+  display: flex;
+  flex: 2;
+  align-items: flex-end;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: color 0.4s ease-in-out;
+}
+
+.card-links:hover {
+  text-decoration: underline;
+  color: #7a97e5;
+}
+
+.card-tags span {
+  transition: all 0.3s ease-in-out;
+}
+.card-tags span:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
