@@ -89,20 +89,21 @@
   font-size: 2.5rem;
   cursor: pointer;
   color: #d0dcfd;
-  transition: color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .icon-git {
   font-size: 2.5rem;
   cursor: pointer;
   color: #d0dcfd;
-  transition: color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .icon-linkd:hover {
   color: #a5bdff;
-  
+  transform: scale(1.1);
 }
 .icon-git:hover {
   color: #a5bdff;
+  transform: scale(1.1);
 }

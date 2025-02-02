@@ -34,7 +34,9 @@ export default function HomeSection() {
           </h1>
           <span id="element"></span>
           <div className="btn">
-            <button className="btn-resume">Resume 🗒️</button>
+            <a href="documents/Manoj-HP-Resume2025.pdf" target="_blank">
+              <button className="btn-resume">Resume 🗒️</button>
+            </a>
             <button className="btn-contact">Contact Info</button>
           </div>
           <div className="social-links">

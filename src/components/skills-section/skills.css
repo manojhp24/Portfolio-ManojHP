@@ -50,15 +50,15 @@
   color: #6e90ed;
 }
 
-.pl-item img{
-  transition: transform 0.1s ease-in;
+.pl-item img {
+  transition: all 0.1s ease-in;
 }
 
-.pl-item img:hover{
-  transform: rotate(-50deg);
+.pl-item img:hover {
+  transform: scale(1.2) rotate(-50deg);
 }
 
-.heading{
+.heading {
   font-size: 1.2rem;
   font-weight: 600;
 }

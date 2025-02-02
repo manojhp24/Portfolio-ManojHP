@@ -3,6 +3,7 @@ import NavBar from "./components/nav-bar/NavBar";
 import SkillsSection from "./components/skills-section/SkillsSection";
 import "./index.css";
 import ProjectSection from "./components/project-section/projectsection";
+import ExperienceSection from "./components/Experience-section/ExperienceSection";
 
 export default function App() {
   return (
@@ -10,15 +11,13 @@ export default function App() {
       <div className="nav-section">
         <NavBar />
       </div>
-      <div>
-        <HomeSection />
-      </div>
-      <div>
-        <SkillsSection />
-      </div>
-      <div>
-        <ProjectSection />
-      </div>
+      <HomeSection />
+
+      <SkillsSection />
+
+      <ProjectSection />
+
+      <ExperienceSection />
     </div>
   );
 }

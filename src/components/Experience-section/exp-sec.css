@@ -1,0 +1,78 @@
+.exp-sec {
+  min-height: 100vh;
+  padding-top: 6.5rem;
+}
+.exp-sec h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.exp-card-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.exp-card {
+  width: 80%;
+  max-width: 100%;
+  min-height: auto;
+  background-color: rgba(170, 191, 248, 0.1);
+  backdrop-filter: blur(2px);
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.189);
+  transition: all 0.2s ease-in;
+}
+
+.exp-card:hover{
+  background-color: rgba(170, 191, 248, 0.150);
+  transform: scale(1.01);
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+}
+
+.exp-card img {
+  width: 6rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.exp-heading h3 {
+  line-height: 1.75rem;
+  font-size: 1.5rem;
+  color: #297aec;
+}
+.exp-heading {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+}
+
+.cmpny-name {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+
+.cmpny-name span{
+  color:#d1d1d1;
+}
+
+.exp-details {
+  padding: 0 2rem 1rem 3rem;
+}
+.exp-details ul li {
+  line-height: 2rem;
+  font-size: 1.2rem;
+  color: #d1d1d1;
+}
+.exp-details ul li::marker {
+ color: #297aec;
+}

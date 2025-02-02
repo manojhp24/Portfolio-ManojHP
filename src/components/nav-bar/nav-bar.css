@@ -21,6 +21,7 @@
   display: flex;
   align-items: center;
   gap: 3.5rem;
+  list-style: none;
 }
 .nav-links ul li {
   gap: 2rem;
