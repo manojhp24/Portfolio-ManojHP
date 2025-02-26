@@ -4,6 +4,7 @@ import SkillsSection from "./components/skills-section/SkillsSection";
 import "./index.css";
 import ProjectSection from "./components/project-section/projectsection";
 import ExperienceSection from "./components/Experience-section/ExperienceSection";
+import { ContactSection } from "./components/contact-section/ContactSection";
 
 export default function App() {
   return (
@@ -18,6 +19,8 @@ export default function App() {
       <ProjectSection />
 
       <ExperienceSection />
+
+      <ContactSection />
     </div>
   );
 }

@@ -1,40 +1,51 @@
-.nav-section {
-  display: flex;
-  justify-content: center;
-}
-
+/* Main Navbar */
 .nav-bar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.3rem 1rem;
+  padding: 0.8rem 1.5rem;
   position: fixed;
-  width: 50vw;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
-  margin-top: 1.5rem;
-  border-radius: 2rem;
-  z-index: 10;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
 }
 
 .nav-links ul {
   display: flex;
   align-items: center;
-  gap: 3.5rem;
-  list-style: none;
-}
-.nav-links ul li {
   gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
+.nav-links ul li {
+  text-align: center;
+}
+
 .nav-links ul li a {
   font-size: 1.1rem;
   font-weight: 500;
   color: #979797;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
+
 .nav-links ul li a:hover {
   color: #c4c4c4;
 }
 
+/* Active Link */
 .active {
   background-color: #1f2937;
   padding: 0.9rem;
@@ -47,7 +58,50 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+/* Hamburger Menu (Hidden by Default) */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger menu */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    display: none;
+    padding: 1rem 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    display: block;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links ul li {
+    width: 100%;
+  }
+
+  .nav-links ul li a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
 }

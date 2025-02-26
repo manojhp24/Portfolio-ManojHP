@@ -1,78 +1,234 @@
 .exp-sec {
   min-height: 100vh;
   padding-top: 6.5rem;
+  background-color: #0f1526; /* Added background color matching project section */
 }
+
 .exp-sec h2 {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 
+/* Card Container */
 .exp-card-cont {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 2rem;
+  padding: 0 2rem;
 }
 
+/* Experience Card */
 .exp-card {
   width: 80%;
-  max-width: 100%;
+  max-width: 600px;
   min-height: auto;
   background-color: rgba(170, 191, 248, 0.1);
   backdrop-filter: blur(2px);
   border-radius: 1rem;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.189);
-  transition: all 0.2s ease-in;
+  transition: all 0.3s ease-in;
+  padding: 1.5rem;
 }
 
-.exp-card:hover{
-  background-color: rgba(170, 191, 248, 0.150);
-  transform: scale(1.01);
+.exp-card:hover {
+  background-color: rgba(170, 191, 248, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
+/* Header */
 .card-head {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
+/* Image */
 .exp-card img {
   width: 6rem;
   height: auto;
   padding: 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease;
 }
 
-.exp-heading h3 {
-  line-height: 1.75rem;
-  font-size: 1.5rem;
-  color: #297aec;
+.exp-card:hover img {
+  transform: scale(1.05);
 }
+
+/* Heading */
 .exp-heading {
   display: flex;
   flex-direction: column;
   row-gap: 0.6rem;
+  flex: 1;
 }
 
+.exp-heading h3 {
+  font-size: 1.5rem;
+  color: #297aec;
+}
+
+/* Company Name */
 .cmpny-name {
   display: flex;
   column-gap: 0.5rem;
   align-items: center;
 }
 
-.cmpny-name span{
-  color:#d1d1d1;
+.cmpny-name span {
+  color: #d1d1d1;
 }
 
+/* Details */
 .exp-details {
-  padding: 0 2rem 1rem 3rem;
+  padding: 1rem 2rem 1rem 3rem;
+  margin-top: 0.5rem;
 }
+
+.exp-details ul {
+  list-style-type: disc;
+}
+
 .exp-details ul li {
   line-height: 2rem;
   font-size: 1.2rem;
   color: #d1d1d1;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
 }
+
 .exp-details ul li::marker {
- color: #297aec;
+  color: #297aec;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets (Max Width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .exp-card {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .exp-card img {
+    width: 5rem;
+  }
+
+  .exp-heading h3 {
+    font-size: 1.3rem;
+  }
+
+  .exp-details {
+    padding: 0.5rem 1.5rem 1rem 2rem;
+  }
+
+  .exp-details ul li {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+
+/* Mobile Screens (Max Width: 768px) */
+@media screen and (max-width: 768px) {
+  .exp-sec {
+    padding-top: 5rem;
+  }
+
+  .exp-sec h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .exp-card-cont {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .exp-card {
+    width: 95%;
+    max-width: 400px;
+    padding: 1rem;
+  }
+
+  .card-head {
+    gap: 0.8rem;
+  }
+
+  .exp-card img {
+    width: 4rem;
+    padding: 0.5rem;
+  }
+
+  .exp-heading h3 {
+    font-size: 1.2rem;
+  }
+
+  .exp-details {
+    padding: 0.5rem 1rem 1rem 1.5rem;
+  }
+
+  .exp-details ul li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* Small Mobile Screens (Max Width: 480px) */
+@media screen and (max-width: 480px) {
+  .exp-sec {
+    padding-top: 4rem;
+  }
+
+  .exp-sec h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .exp-card-cont {
+    gap: 1.25rem;
+    padding: 0 0.5rem;
+  }
+
+  .exp-card {
+    width: 95%;
+    padding: 0.8rem;
+  }
+
+  .card-head {
+    gap: 0.5rem;
+  }
+
+  .exp-card img {
+    width: 3.5rem;
+    padding: 0.3rem;
+  }
+
+  .exp-heading h3 {
+    font-size: 1rem;
+  }
+
+  .cmpny-name {
+    column-gap: 0.3rem;
+  }
+
+  .cmpny-name span {
+    font-size: 0.9rem;
+  }
+
+  .exp-details {
+    padding: 0.3rem 0.5rem 0.8rem 1rem;
+  }
+
+  .exp-details ul li {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.3rem;
+  }
 }

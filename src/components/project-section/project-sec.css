@@ -1,101 +1,41 @@
 .project-sec {
-  padding-top: 6.5rem;
+  padding-top: 6rem;
   min-height: 100vh;
-}
-
-.proj-card-cont {
-  display: flex;
-}
-
-.p-card {
-  display: flex;
-  flex-direction: column;
-  background-color: #1b2335;
-  padding: 20px;
-  border-radius: 1rem;
-  max-width: 400px;
-  min-height: 450px;
-  width: 100%;
-  position: relative;
-}
-.p-card img {
-  align-self: center;
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 1rem;
   margin-bottom: 2rem;
+  background-color: #0f1526; /* Added background color for the section */
 }
 
-.card-titlle {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.description {
-  margin-bottom: 1rem;
-}
-
-.card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 1rem;
-  margin-bottom: 0.9rem;
-}
-.card-tags span {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem 0.5rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-}
 .project-sec h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.project-sec {
-  padding-top: 6rem;
-  min-height: 100vh;
-  margin-bottom: 2rem;
-}
-
 .proj-card-cont {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem 2rem;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .p-card {
   display: flex;
   flex-direction: column;
   background-color: #1b2335;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 1rem;
   max-width: 350px;
-  flex-grow: 1;
-  /* animation: neonPluse 2s infinite; */
+  width: 100%;
+  position: relative;
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 0 0 20px #303030;
+  box-shadow: 0 0 20px #000000;
+  transition: transform 0.3s ease;
 }
 
-.p-card img {
-  transition: transform 0.3s ease-in-out;
-}
-.p-card img:hover {
-  transform: scale(1.02);
-}
-
-@keyframes neonPluse {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(66, 220, 255, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(66, 220, 255, 0.3);
-  }
+.p-card:hover {
+  transform: translateY(-5px);
 }
 
 .p-card::before {
@@ -121,16 +61,20 @@
 .p-card img {
   align-self: center;
   width: 100%;
-  height: auto; /* More flexible */
-  max-height: 200px; /* Keeps size reasonable */
+  height: 200px;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   margin-bottom: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.p-card img:hover {
+  transform: scale(1.02);
 }
 
 .card-title {
   margin-bottom: 0.8rem;
-  font-size: 1.3rem; /* Slightly smaller */
+  font-size: 1.3rem;
 }
 
 .description {
@@ -150,6 +94,12 @@
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-tags span:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 .card-links {
@@ -166,10 +116,74 @@
   color: #7a97e5;
 }
 
-.card-tags span {
-  transition: all 0.3s ease-in-out;
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .proj-card-cont {
+    gap: 1.5rem;
+  }
+  
+  .p-card {
+    max-width: 320px;
+  }
 }
-.card-tags span:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+
+@media (max-width: 768px) {
+  .project-sec h2 {
+    font-size: 2rem;
+  }
+  
+  .proj-card-cont {
+    gap: 1.5rem 1rem;
+  }
+  
+  .p-card {
+    max-width: 100%;
+    min-height: auto;
+  }
+  
+  .p-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-sec {
+    padding-top: 4rem;
+  }
+  
+  .project-sec h2 {
+    font-size: 1.8rem;
+  }
+  
+  .p-card {
+    padding: 1rem;
+  }
+  
+  .p-card img {
+    height: 160px;
+    margin-bottom: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .description {
+    font-size: 0.85rem;
+  }
+  
+  .card-tags span {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
+
+@keyframes neonPluse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(66, 220, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(66, 220, 255, 0.3);
+  }
 }

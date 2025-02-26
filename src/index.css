@@ -12,13 +12,7 @@ html {
 }
 
 body {
-  background: #5c258d; /* fallback for old browsers */
-  background: radial-gradient(
-    circle farthest-corner at center center,
-    #1c3478 0%,
-    #161923 100%
-  );
-
+  background-color: #0f1526;
   color: white;
   min-height: 100vh;
 }

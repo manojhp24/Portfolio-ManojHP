@@ -29,14 +29,16 @@ function ProjectContainer() {
     {
       projectName: "House Price Prediction",
       thumbnail: "images/projectImages/houseprice.jpeg",
-      description: "Advanced machine learning system with real-time processing",
+      description:
+        "Predicts house prices using machine learning models based on real estate data.",
       tools: ["Python", "Scikit-learn", "Jupyter", "Django"],
     },
     {
-      projectName: "Birthday Event Booking Track System",
-      thumbnail: "images/projectImages/birthday-booking.jpeg",
-      description: "Advanced machine learning system with real-time processing",
-      tools: ["Flutter", "Dart", "FireBase", "VS Code", "Android Studio"],
+      projectName: "Book My Event",
+      thumbnail: "images/projectImages/BookMyEventThumbnail.png",
+      description:
+        "Event booking application for managing and scheduling events with Firebase integration.",
+      tools: ["Flutter", "Dart", "Firebase", "VS Code", "Android Studio"],
     },
   ];
 

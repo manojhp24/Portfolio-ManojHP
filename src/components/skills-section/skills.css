@@ -1,64 +1,181 @@
+/* Enhanced Skills Section Styling */
 .skill-sec {
-  padding: 2rem 0;
+  padding: 4rem 0;
   min-height: 100vh;
-  padding-top: 6.5rem;
+  padding-top: 7rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  position: relative;
+  overflow: hidden;
 }
+
 .skill-sec h2 {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #0575e6, #00f260);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .skill-cont {
   display: flex;
-  gap: 5rem;
+  flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.prg-lang hr {
-  margin-top: 1rem;
+/* Skill Card */
+.prg-lang {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  width: 100%;
+  max-width: 30rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.prg-lang:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.15);
+}
+
+/* Programming Languages Grid */
 .pl-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.7rem;
   margin-top: 1rem;
+  justify-items: center;
 }
 
 .pl-grid div {
   display: flex;
-  gap: 0.6rem;
   align-items: center;
-}
-.pl-grid div {
-  transition: transform 0.5s ease-in-out;
+  justify-content: center;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 9rem;
 }
 
 .pl-grid div:hover {
-  transform: scale(1.15);
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: white;
 }
 
 .pl-grid div img {
-  width: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
 }
 
-.pl-py {
-  font-size: 2rem;
-  color: #6e90ed;
-}
-
-.pl-item img {
-  transition: all 0.1s ease-in;
-}
-
-.pl-item img:hover {
-  transform: scale(1.2) rotate(-50deg);
-}
-
+/* Section Headings */
 .heading {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .skill-sec h2 {
+    font-size: 2.5rem;
+  }
+
+  .skill-cont {
+    gap: 2rem;
+  }
+
+  .prg-lang {
+    max-width: 25rem;
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-sec {
+    padding-top: 5rem;
+  }
+
+  .skill-sec h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .prg-lang {
+    max-width: 22rem;
+    padding: 1.5rem;
+  }
+
+  .pl-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .pl-grid div {
+    width: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-sec {
+    padding-top: 4rem;
+  }
+
+  .skill-sec h2 {
+    font-size: 2rem;
+  }
+
+  .pl-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .prg-lang {
+    max-width: 100%;
+    padding: 1.2rem;
+  }
+
+  .pl-grid div {
+    width: 7rem;
+    padding: 0.6rem;
+  }
+
+  .heading {
+    font-size: 1.2rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .skill-sec {
+    background: linear-gradient(135deg, #1a1c20 0%, #0f1214 100%);
+  }
+
+  .prg-lang {
+    background: rgba(30, 32, 36, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .pl-grid div {
+    background: rgba(40, 44, 52, 0.7);
+  }
+
+  .pl-grid div:hover {
+    background: rgba(50, 55, 65, 0.9);
+  }
+
+  .heading {
+    color: #e4e6eb;
+  }
 }

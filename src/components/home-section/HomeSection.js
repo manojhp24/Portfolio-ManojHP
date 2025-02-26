@@ -43,7 +43,7 @@ export default function HomeSection() {
             <a href="https://www.linkedin.com/in/manoj-hp/" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} className="icon-linkd" />
             </a>
-            <a href="https://github.com/manojhp007" target="_blank">
+            <a href="https://github.com/manojhp24" target="_blank">
               <FontAwesomeIcon icon={faGithub} className="icon-git" />
             </a>
           </div>

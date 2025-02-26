@@ -27,19 +27,6 @@ function ExperienceContainer() {
         "Gained practical experience in full-stack development.",
       ],
     },
-    {
-      logo: "images/exp-logo.png",
-      expName: "Internship - Java FullStack Development",
-      companyName: "Ideonix Solutions",
-      startDate: "Feb 2024",
-      endDate: "March 2024",
-      description: [
-        "Built an E-commerce web app using HTML, CSS, and JavaScript.",
-        "Developed backend with Java (JDBC, JSP, Servlets).",
-        "Used MySQL for data storage and management.",
-        "Gained practical experience in full-stack development.",
-      ],
-    },
   ];
 
   return (
