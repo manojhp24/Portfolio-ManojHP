@@ -1,46 +1,70 @@
+/* Responsive Contact Section Styling */
 .cont-sec {
   min-height: 100vh;
   padding-top: 6.5rem;
-  background-color: transparent;
+  padding-bottom: 3rem;
+  background: linear-gradient(135deg, #0c0e11 0%, #1a1d22 50%, #121518 100%);
   color: #fff;
+  position: relative;
+  overflow: hidden;
 }
 
 .cont-sec h2 {
   text-align: center;
   font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #0575e6, #00f260);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .footer-cont {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .contact-sec {
   flex-basis: 100%;
   max-width: 70%;
+  background: rgba(35, 38, 45, 0.85);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  margin: 1.5rem 0;
 }
+
 .form-group input {
   padding: 1rem 1rem;
   border-radius: 0.4rem;
-  background-color: #f8f8f8;
+  background-color: rgba(25, 27, 31, 0.7);
   border: 1px solid #5c5c5c;
   color: white;
   font-size: 1rem;
+  transition: all 0.3s ease;
 }
+
 .form-group textarea {
   padding: 1rem 1rem;
   border-radius: 0.4rem;
-  background-color: #ffffff;
+  background-color: rgba(25, 27, 31, 0.7);
   border: 1px solid #5c5c5c;
   color: white;
   font-size: 1rem;
+  min-height: 150px;
+  resize: vertical;
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus,
@@ -51,18 +75,248 @@
 }
 
 .form-group label {
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #e4e6eb;
 }
 
 .submit-btn {
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-radius: 0.5rem;
-  background-color: #3c60c4;
+  background: linear-gradient(to right, #3c60c4, #5d7fdd);
   color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
 }
 
 .submit-btn:hover {
   transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #4570e6, #6a8ffe);
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Footer bottom section with copyright and social links */
+.footer-bottom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #e4e6eb;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links-footer {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-linkd,
+.icon-git,
+.icon-email {
+  font-size: 2rem;
+  color: #a5bdff;
+  transition: all 0.3s ease;
+}
+
+.icon-linkd:hover {
+  color: #0077b5;
+  transform: translateY(-5px);
+}
+
+.icon-git:hover {
+  color: #f5f5f5;
+  transform: translateY(-5px);
+}
+
+.icon-email:hover {
+  color: #ea4335;
+  transform: translateY(-5px);
+}
+
+.copyright p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive adjustments for footer bottom */
+@media (max-width: 768px) {
+  .footer-bottom {
+    margin-top: 2rem;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .social-links-footer {
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .icon-linkd,
+  .icon-git,
+  .icon-email {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-bottom {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+
+  .social-links-footer {
+    gap: 1.25rem;
+  }
+
+  .icon-linkd,
+  .icon-git,
+  .icon-email {
+    font-size: 1.6rem;
+  }
+
+  .copyright p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive adjustments - Large screens */
+@media (min-width: 1440px) {
+  .footer-cont {
+    max-width: 1400px;
+  }
+
+  .contact-sec {
+    max-width: 60%;
+  }
+}
+
+/* Responsive adjustments - Medium screens */
+@media (max-width: 1024px) {
+  .cont-sec h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-sec {
+    max-width: 80%;
+  }
+}
+
+/* Responsive adjustments - Tablets */
+@media (max-width: 768px) {
+  .cont-sec {
+    padding-top: 5rem;
+  }
+
+  .cont-sec h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-sec {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .footer-cont {
+    padding: 0 1.5rem;
+  }
+
+  .form-group {
+    margin: 1.2rem 0;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive adjustments - Small tablets */
+@media (max-width: 600px) {
+  .contact-sec {
+    max-width: 100%;
+  }
+
+  .form-group {
+    margin: 1rem 0;
+  }
+
+  .submit-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive adjustments - Mobile */
+@media (max-width: 480px) {
+  .cont-sec {
+    padding-top: 4rem;
+  }
+
+  .cont-sec h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-sec {
+    padding: 1.2rem;
+  }
+
+  .footer-cont {
+    padding: 2rem 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive adjustments - Small Mobile */
+@media (max-width: 320px) {
+  .cont-sec h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group {
+    margin: 0.8rem 0;
+  }
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .contact-sec {
+    border: 2px solid CanvasText;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .submit-btn {
+    border: 1px solid CanvasText;
+  }
 }

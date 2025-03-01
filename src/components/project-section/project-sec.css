@@ -9,6 +9,9 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #0575e6, #00f260);
+  background-clip: text;
 }
 
 .proj-card-cont {
@@ -97,6 +100,10 @@
   transition: all 0.3s ease-in-out;
 }
 
+.arrow-link {
+  align-self: center;
+}
+
 .card-tags span:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
@@ -121,7 +128,7 @@
   .proj-card-cont {
     gap: 1.5rem;
   }
-  
+
   .p-card {
     max-width: 320px;
   }
@@ -131,16 +138,16 @@
   .project-sec h2 {
     font-size: 2rem;
   }
-  
+
   .proj-card-cont {
     gap: 1.5rem 1rem;
   }
-  
+
   .p-card {
     max-width: 100%;
     min-height: auto;
   }
-  
+
   .p-card img {
     height: 180px;
   }
@@ -148,30 +155,30 @@
 
 @media (max-width: 480px) {
   .project-sec {
-    padding-top: 4rem;
+    padding-top: 5rem;
   }
-  
+
   .project-sec h2 {
     font-size: 1.8rem;
   }
-  
+
   .p-card {
     padding: 1rem;
   }
-  
+
   .p-card img {
     height: 160px;
     margin-bottom: 1rem;
   }
-  
+
   .card-title {
     font-size: 1.1rem;
   }
-  
+
   .description {
     font-size: 0.85rem;
   }
-  
+
   .card-tags span {
     padding: 0.3rem 0.6rem;
     font-size: 0.75rem;

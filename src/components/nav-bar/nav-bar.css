@@ -13,6 +13,11 @@
   z-index: 1000;
 }
 
+.logo {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 /* Navigation Links */
 .nav-links {
   display: flex;
@@ -71,6 +76,10 @@
 @media screen and (max-width: 768px) {
   .hamburger {
     display: block; /* Show hamburger menu */
+  }
+
+  .logo{
+    font-size: 1rem;
   }
 
   .nav-links {

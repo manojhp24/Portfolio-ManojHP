@@ -1,13 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Typed from "typed.js";
 import "./home-section.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faGithub,
+  fawindowclose,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function HomeSection() {
+  const [showInfoModel, setShowInfoModel] = useState(false);
+
   useEffect(() => {
     const options = {
-      strings: ["Full Stack Developer", "Machine Learning", "Deep Learning"],
+      strings: [
+        "Full Stack Developer",
+        "Machine Learning",
+        "Mobile App Developer",
+      ],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
@@ -37,7 +47,12 @@ export default function HomeSection() {
             <a href="documents/Manoj-HP-Resume2025.pdf" target="_blank">
               <button className="btn-resume">Resume 🗒️</button>
             </a>
-            <button className="btn-contact">Contact Info</button>
+            <button
+              className="btn-contact"
+              onClick={() => setShowInfoModel(true)}
+            >
+              Contact Info
+            </button>
           </div>
           <div className="social-links">
             <a href="https://www.linkedin.com/in/manoj-hp/" target="_blank">
@@ -49,6 +64,23 @@ export default function HomeSection() {
           </div>
         </div>
       </div>
+
+      {showInfoModel && (
+        <div className="modal-overlay" onClick={() => setShowInfoModel(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="close-modal"
+              onClick={() => setShowInfoModel(false)}
+            >
+              X
+            </button>
+            <h2>Contact Info</h2>
+            <p>Email: manojhp584@gmail.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Location: Mysore, India</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

@@ -1,14 +1,22 @@
+/* Enhanced Experience Section Styling */
 .exp-sec {
   min-height: 100vh;
   padding-top: 6.5rem;
-  background-color: #0f1526; /* Added background color matching project section */
+  padding-bottom: 3rem;
+  background: linear-gradient(135deg, #0c0e11 0%, #1a1d22 50%, #121518 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .exp-sec h2 {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #ffffff;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #0575e6, #00f260);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Card Container */
@@ -20,6 +28,8 @@
   gap: 2rem;
   margin-bottom: 2rem;
   padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Experience Card */
@@ -27,18 +37,19 @@
   width: 80%;
   max-width: 600px;
   min-height: auto;
-  background-color: rgba(170, 191, 248, 0.1);
-  backdrop-filter: blur(2px);
+  background-color: rgba(35, 38, 45, 0.85);
+  backdrop-filter: blur(5px);
   border-radius: 1rem;
-  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.189);
-  transition: all 0.3s ease-in;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
   padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .exp-card:hover {
-  background-color: rgba(170, 191, 248, 0.15);
+  background-color: rgba(45, 50, 60, 0.9);
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Header */
@@ -55,11 +66,13 @@
   height: auto;
   padding: 1rem;
   border-radius: 0.5rem;
-  transition: transform 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .exp-card:hover img {
   transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Heading */
@@ -72,7 +85,8 @@
 
 .exp-heading h3 {
   font-size: 1.5rem;
-  color: #297aec;
+  color: #4d9cff;
+  font-weight: 600;
 }
 
 /* Company Name */
@@ -83,7 +97,7 @@
 }
 
 .cmpny-name span {
-  color: #d1d1d1;
+  color: #e4e6eb;
 }
 
 /* Details */
@@ -97,28 +111,45 @@
 }
 
 .exp-details ul li {
-  line-height: 2rem;
-  font-size: 1.2rem;
-  color: #d1d1d1;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+  color: #e4e6eb;
   padding-left: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .exp-details ul li::marker {
-  color: #297aec;
+  color: #4d9cff;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
 
-/* Tablets (Max Width: 1024px) */
+/* Large Screens */
+@media screen and (min-width: 1440px) {
+  .exp-card-cont {
+    max-width: 1400px;
+  }
+
+  .exp-card {
+    max-width: 650px;
+  }
+}
+
+/* Laptops and Large Tablets */
 @media screen and (max-width: 1024px) {
+  .exp-sec h2 {
+    font-size: 2.5rem;
+  }
+
   .exp-card {
     width: 90%;
     max-width: 500px;
+    padding: 1.2rem;
   }
 
   .exp-card img {
     width: 5rem;
+    padding: 0.8rem;
   }
 
   .exp-heading h3 {
@@ -126,34 +157,42 @@
   }
 
   .exp-details {
-    padding: 0.5rem 1.5rem 1rem 2rem;
+    padding: 0.8rem 1.5rem 1rem 2rem;
   }
 
   .exp-details ul li {
     font-size: 1rem;
     line-height: 1.6rem;
+    margin-bottom: 0.4rem;
   }
 }
 
-/* Mobile Screens (Max Width: 768px) */
+/* Medium Tablets */
+@media screen and (max-width: 900px) {
+  .exp-card {
+    max-width: 90%;
+  }
+}
+
+/* Small Tablets */
 @media screen and (max-width: 768px) {
   .exp-sec {
     padding-top: 5rem;
   }
 
   .exp-sec h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 1.5rem;
   }
 
   .exp-card-cont {
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 
   .exp-card {
-    width: 95%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 450px;
     padding: 1rem;
   }
 
@@ -162,7 +201,7 @@
   }
 
   .exp-card img {
-    width: 4rem;
+    width: 4.5rem;
     padding: 0.5rem;
   }
 
@@ -180,24 +219,38 @@
   }
 }
 
-/* Small Mobile Screens (Max Width: 480px) */
+/* Large Mobile Screens */
+@media screen and (max-width: 600px) {
+  .exp-sec h2 {
+    font-size: 2rem;
+  }
+
+  .exp-card-cont {
+    padding: 0 1rem;
+  }
+
+  .exp-card {
+    max-width: 100%;
+  }
+}
+
+/* Medium Mobile Screens */
 @media screen and (max-width: 480px) {
   .exp-sec {
-    padding-top: 4rem;
+    padding-top: 5rem;
   }
 
   .exp-sec h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
   }
 
   .exp-card-cont {
     gap: 1.25rem;
-    padding: 0 0.5rem;
+    padding: 0 0.8rem;
   }
 
   .exp-card {
-    width: 95%;
     padding: 0.8rem;
   }
 
@@ -211,7 +264,7 @@
   }
 
   .exp-heading h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .cmpny-name {
@@ -230,5 +283,41 @@
     font-size: 0.9rem;
     line-height: 1.4rem;
     margin-bottom: 0.3rem;
+  }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 320px) {
+  .exp-sec h2 {
+    font-size: 1.5rem;
+  }
+
+  .exp-card-cont {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .exp-card {
+    padding: 0.7rem;
+  }
+
+  .exp-heading h3 {
+    font-size: 1rem;
+  }
+
+  .exp-details ul li {
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+  }
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .exp-card {
+    border: 2px solid CanvasText;
+  }
+
+  .exp-card img {
+    border: 1px solid CanvasText;
   }
 }
