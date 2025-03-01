@@ -195,8 +195,7 @@
 
 /* Force dark mode for mobile if needed */
 @media (max-width: 768px) {
-  /* You can uncomment these if you want to force dark mode on mobile
-  .prg-lang {
+  You can uncomment these if you want to force dark mode on mobile .prg-lang {
     background: rgba(30, 32, 36, 0.85) !important;
     border: 1px solid rgba(255, 255, 255, 0.05) !important;
   }
@@ -214,11 +213,10 @@
   .heading {
     color: #e4e6eb !important;
   }
-  
-  .prg-lang p, 
-  .prg-lang span, 
+
+  .prg-lang p,
+  .prg-lang span,
   .prg-lang a {
     color: #e4e6eb !important;
   }
-  */
 }
