@@ -76,7 +76,7 @@ export default function HomeSection() {
             </button>
             <h2>Contact Info</h2>
             <p>Email: manojhp584@gmail.com</p>
-            <p>Phone: +91 98765 43210</p>
+            <p>Phone: +91-6361337631</p>
             <p>Location: Mysore, India</p>
           </div>
         </div>
