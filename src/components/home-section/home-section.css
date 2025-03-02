@@ -212,72 +212,131 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark background */
+  background: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  backdrop-filter: blur(5px); /* Adds a subtle blur effect to background */
 }
 
 /* Modal content */
 .modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  width: 350px;
+  background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 1px 8px rgba(0, 0, 0, 0.1);
+  width: 380px;
   text-align: center;
   position: relative;
-  animation: fadeIn 0.3s ease-in-out;
+  animation: modalAppear 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Close button */
 .close-modal {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
+  top: 15px;
+  right: 15px;
+  background: #f0f0f0;
   border: none;
-  font-size: 20px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
   cursor: pointer;
-  color: #333;
-  transition: color 0.3s;
+  color: #555;
+  transition: all 0.2s ease;
 }
 
 .close-modal:hover {
-  color: red;
+  background: #ff5a5a;
+  color: white;
+  transform: rotate(90deg);
 }
 
 /* Heading style */
 .modal-content h2 {
-  margin-bottom: 10px;
-  font-size: 22px;
-  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #2d3748;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.modal-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  border-radius: 3px;
 }
 
 /* Text styles */
 .modal-content p {
   font-size: 16px;
-  color: #555;
-  margin: 5px 0;
+  color: #4a5568;
+  margin: 12px 0;
+  line-height: 1.6;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {
+/* Modal animations */
+@keyframes modalAppear {
+  0% {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.8);
   }
-  to {
+  100% {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-.popup-box {
-  animation: fadeIn 0.3s ease-in-out;
+/* Button styles if needed */
+.modal-button {
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.modal-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(99, 102, 241, 0.3);
+}
+
+.modal-button:active {
+  transform: translateY(0);
+}
+
+/* Optional icon container styles */
+.modal-icon {
+  width: 70px;
+  height: 70px;
+  background: #f0f7ff;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6366f1;
+  font-size: 32px;
+  border: 2px solid rgba(99, 102, 241, 0.3);
+}
 /* Large screens */
 @media screen and (min-width: 1440px) {
   .home-container {
