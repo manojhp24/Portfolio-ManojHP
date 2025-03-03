@@ -19,6 +19,7 @@ function SkillsContainer() {
         { name: "Python", logo: "images/svg/python.svg" },
         { name: "Java", logo: "images/svg/java (1).svg" },
         { name: "JavaScript", logo: "images/svg/javascript.svg" },
+        { name: "Dart", logo: "images/svg/dart.svg" },
       ],
     },
     {
