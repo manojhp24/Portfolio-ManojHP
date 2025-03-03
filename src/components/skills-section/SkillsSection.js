@@ -29,6 +29,7 @@ function SkillsContainer() {
         { name: "CSS", logo: "images/svg/css.svg" },
         { name: "JavaScript", logo: "images/svg/javascript.svg" },
         { name: "React.js", logo: "images/svg/react.svg" },
+        { name: "Flutter", logo: "images/svg/flutter.svg" },
       ],
     },
     {
