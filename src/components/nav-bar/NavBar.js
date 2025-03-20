@@ -25,7 +25,7 @@ export default function NavBar() {
 
   return (
     <header className="nav-bar">
-      <div className="logo">My Portfolio</div>
+      <div className="logo">MANOJ HP</div>
 
       {/* Hamburger Icon */}
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
