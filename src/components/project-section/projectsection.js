@@ -67,7 +67,9 @@ function ProjectCards({ project }) {
       </div>
 
       <div className="card-links">
-        <span className="view">View</span>
+        <a href="https://eventsbookingapp.web.app/">
+          <span className="view">View</span>
+        </a>
         <FontAwesomeIcon
           icon={faArrowUpRightFromSquare}
           className="arrow-link"
