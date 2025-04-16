@@ -25,6 +25,7 @@ function ProjectContainer() {
         "Java",
         "Deep Learning",
       ],
+      projectLink: "",
     },
     {
       projectName: "House Price Prediction",
@@ -32,6 +33,7 @@ function ProjectContainer() {
       description:
         "Predicts house prices using machine learning models based on real estate data.",
       tools: ["Python", "Scikit-learn", "Jupyter", "Django"],
+      projectLink: "",
     },
     {
       projectName: "Book My Event",
@@ -39,6 +41,7 @@ function ProjectContainer() {
       description:
         "Event booking application for managing and scheduling events with Firebase integration.",
       tools: ["Flutter", "Dart", "Firebase", "VS Code", "Android Studio"],
+      projectLink: "https://eventsbookingapp.web.app/",
     },
   ];
 
@@ -67,7 +70,7 @@ function ProjectCards({ project }) {
       </div>
 
       <div className="card-links">
-        <a href="https://eventsbookingapp.web.app/">
+        <a href={project.projectLink}>
           <span className="view">View</span>
         </a>
         <FontAwesomeIcon

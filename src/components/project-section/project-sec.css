@@ -122,6 +122,9 @@
   text-decoration: underline;
   color: #7a97e5;
 }
+.view {
+  color: white;
+}
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
